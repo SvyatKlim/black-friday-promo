@@ -1,0 +1,30 @@
+{
+  "name": "test-task",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "scripts": {
+    "start": "webpack serve -c webpack.config.js",
+    "build": "webpack -c webpack.config.prod.js --progress"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "clean-webpack-plugin": "^4.0.0",
+    "css-loader": "^6.7.1",
+    "mini-css-extract-plugin": "^2.6.1",
+    "pug-plugin": "^2.7.6",
+    "sass": "^1.52.3",
+    "sass-loader": "^13.0.0",
+    "style-loader": "^3.3.1",
+    "terser-webpack-plugin": "^5.3.3",
+    "url-loader": "^4.1.1",
+    "webpack": "^5.73.0",
+    "webpack-cli": "^4.10.0"
+  },
+  "dependencies": {
+    "lodash": "^4.17.21",
+    "webpack-dev-server": "^4.9.2"
+  }
+}

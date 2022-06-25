@@ -1,0 +1,92 @@
+.card {
+  background: $bg-card;
+  width: calc(20% - 16px);
+  margin: 0 8px;
+  border: 1px solid $black;
+  border-radius: 14px;
+  transition: border-color 0.3s ease;
+  position: relative;
+
+  &.hover {
+    border-color: $red;
+  }
+
+  &__inner {
+    padding: 22px 25px 20px;
+  }
+
+  &__title {
+    margin-bottom: 18px;
+  }
+
+  &__price {
+    margin-bottom: 18px;
+
+    &__full {
+      color: $red-price;
+      margin-right: 5px;
+      position: relative;
+
+      &::before {
+        content: '';
+        position: absolute;
+        width: calc(100% + 6px);
+        height: 2px;
+        background-color: $red-price;
+        top: 50%;
+        transform: translateY(-50%);
+        left: -3px;
+      }
+    }
+
+    &__discount {
+      margin-right: 2px;
+    }
+  }
+
+  &__button {
+    position: relative;
+    width: 100%;
+    background-color: $red;
+    border-bottom-left-radius: 14px;
+    border-bottom-right-radius: 14px;
+    padding: 12px;
+    text-align: center;
+
+    &__wrapper {
+      max-height: 0;
+      transition: all 0.3s linear;
+      opacity: 0;
+
+      .hover & {
+        max-height: 42px;
+        opacity: 1;
+      }
+    }
+  }
+
+  @media screen and (min-width: 1681px) {
+    width: calc(20% - 30px);
+    margin: 0 15px;
+
+    &__inner {
+      padding: clamp(22px, 1.4rem, 30px) clamp(25px, 1.4rem, 30px) clamp(20px, 1.4rem, 30px);
+    }
+
+    &__button {
+      &__wrapper {
+        .hover & {
+          max-height: clamp(42px, 2.2rem, 62px);
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 1024px) {
+    width: calc(50% - 16px);
+    margin-top: 30px;
+  }
+  @media screen and (max-width: 576px) {
+    width: 100%;
+    margin: 20px 0 0;
+  }
+}

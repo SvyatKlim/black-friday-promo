@@ -1,0 +1,34 @@
+doctype html
+html(lang="en")
+    head
+        //- add styles in head
+        link(href=require('../styles/main.scss') rel='stylesheet')
+    body
+        -var modVal
+        header.header
+            a(class='img header__logo' href='https://snov.io/' target='_blank')
+                include ../images/logo.svg
+        main.main
+            section.intro.container.padding-top
+                .intro__banner
+                    p.intro__banner__text.padding-bottom.d-flex.
+                        50 #[<span class='font-additional'>%</span>]
+                .intro__inner
+                    .intro__info
+                        h1.h1.intro__info__item.d-flex.flex-column
+                            | #[<span class="red increased-text">50% OFF </span>]
+                            | ALL ANNUAL PLANS
+                        .intro__info__item.intro__info__promocode--wrapper.d-flex
+                            .intro__info__promocode.itro__info__item.h6.d-flex.flex-column.text-center
+                                | We’ve cut the price in half. But now or miss out!
+                                | #[<span class="h4 white"> Use promo-code <span class="red uppercase increased-title"> blackfriday </span> </span>]
+                                |  at checkout to #[<sub class="bold white"> save up to $3468. </sub>]
+                    .intro__price__wrapper.padding-top.js-btns-parent
+                        .intro__price.d-flex
+                            each val  in myData
+                                include mixins/card.pug
+        script(src=require('../js/main.js'))
+        aside.modal__wrapper.js-modal
+                include mixins/modal.pug
+        footer.footer
+            p Get 12 months of powerful sales tools at the #[<span class="white bold">lowest price of the year</span>].

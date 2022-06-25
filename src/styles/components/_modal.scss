@@ -1,0 +1,106 @@
+.modal {
+  background: $black;
+  border-color: $red;
+
+  &__wrapper {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    background-color: rgba($black, 0.9);
+    z-index: 0;
+    opacity: 0;
+    transition: opacity 0.4s ease-out, z-index 0.5s linear;
+    will-change: opacity, z-index;
+
+    &.open {
+      opacity: 1;
+      z-index: 3;
+    }
+  }
+
+  .card__inner {
+    padding: 22px 25px 0;
+  }
+
+  &__close {
+    position: absolute;
+    right: 20px;
+    top: 17px;
+    display: flex;
+    padding: 5px 0;
+
+    &__item {
+      position: relative;
+      left: -5px;
+      width: 10px;
+      height: 1px;
+      transform: rotate(-45deg);
+      background-color: $white;
+      transition: background-color 0.3s linear;
+
+      &:nth-child(1) {
+        left: 5px;
+        transform: rotate(45deg);
+      }
+    }
+
+    @media (hover: hover) {
+      &:hover {
+        .modal__close__item {
+          background-color: $red-price
+        }
+      }
+    }
+  }
+
+  &__counter {
+    position: relative;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%,-50%);
+      background: $bg-counter;
+      border-radius: 50%;
+      z-index: 0;
+      height: 45px;
+      width: 45px;
+    }
+
+    .text {
+      height: 25px;
+      width: 25px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1;
+      background-color: $black;
+    }
+  }
+  @media screen and (min-width: 1681px) {
+    &__counter{
+      .text{
+        width: 40px;
+        height: 40px;
+      }
+      &:after{
+        height: 60px;
+        width: 60px;
+      }
+    }
+  }
+}

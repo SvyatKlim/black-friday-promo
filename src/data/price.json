@@ -1,0 +1,52 @@
+{
+  "s": {
+    "title": "S",
+    "fullPrice": "39",
+    "discountPrice": "19",
+    "credits": "1 000",
+    "recipients": "1 000",
+    "users": "Unlimited",
+    "export": "Unlimited",
+    "integrations": "Unlimited"
+  },
+  "m": {
+    "title": "M",
+    "fullPrice": "79",
+    "discountPrice": "39",
+    "credits": "5 000",
+    "recipients": "5 000",
+    "users": "Unlimited",
+    "export": "Unlimited",
+    "integrations": "Unlimited"
+  },
+  "l": {
+    "title": "L",
+    "fullPrice": "169",
+    "discountPrice": "84",
+    "credits": "20 000",
+    "recipients": "20 000",
+    "users": "Unlimited",
+    "export": "Unlimited",
+    "integrations": "Unlimited"
+  },
+  "xl": {
+    "title": "XL",
+    "fullPrice": "289",
+    "discountPrice": "144",
+    "credits": "50 000",
+    "recipients": "Unlimited",
+    "users": "Unlimited",
+    "export": "Unlimited",
+    "integrations": "Unlimited"
+  },
+  "xxl": {
+    "title": "XXL",
+    "fullPrice": "578",
+    "discountPrice": "289",
+    "credits": "100 000",
+    "recipients": "Unlimited",
+    "users": "Unlimited",
+    "export": "Unlimited",
+    "integrations": "Unlimited"
+  }
+}

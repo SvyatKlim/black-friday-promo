@@ -1,0 +1,15 @@
+.card.js-hover
+    .card__inner.js-content
+        h2.card__title.white.text-center= val.title
+        p.card__price.text.text-center
+            span.h5.card__price__full= '$' + val.fullPrice
+            span.h3.white.card__price__discount= '$' + val.discountPrice
+            | /mo
+        ul.card__info
+            li.text <span class="gray bold">#{val.credits}</span> credits
+            li.text <span class="gray bold">#{val.recipients}</span> recipients
+            li.text <span class="gray bold">#{val.users}</span> users
+            li.text <span class="gray bold">#{val.export}</span> export
+            li.text <span class="gray bold">#{val.integrations}</span> integrations
+    .card__button__wrapper
+            button(type='button' class="card__button js-button-buy") Buy Now
