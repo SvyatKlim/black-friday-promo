@@ -1,7 +1,10 @@
 doctype html
 html(lang="en")
     head
-        //- add styles in head
+        meta(charset='utf-8')
+        meta(http-equiv='X-UA-Compatible', content='IE=edge')
+        meta(name='description', content='Some description')
+        meta(name='viewport', content='width=device-width, initial-scale=1')
         link(href=require('../styles/main.scss') rel='stylesheet')
     body
         -var modVal
@@ -27,8 +30,8 @@ html(lang="en")
                         .intro__price.d-flex
                             each val  in myData
                                 include mixins/card.pug
-        script(src=require('../js/main.js'))
         aside.modal__wrapper.js-modal
-                include mixins/modal.pug
+            include mixins/modal.pug
+        script(src=require('../js/main.js'))
         footer.footer
             p Get 12 months of powerful sales tools at the #[<span class="white bold">lowest price of the year</span>].
